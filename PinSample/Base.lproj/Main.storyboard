@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9gC-Cf-rtP" userLabel="SignIn StackView">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9gC-Cf-rtP" userLabel="Scrollview StackView">
                                 <rect key="frame" x="65" y="327.66666666666663" width="300" height="276.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="udacity" translatesAutoresizingMaskIntoConstraints="NO" id="0Ms-yE-Pwe">
@@ -61,6 +61,9 @@
                                                 <rect key="frame" x="88" y="0.0" width="212" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="signUpButtonTapped:" destination="Lqc-go-b0v" eventType="touchUpInside" id="Ryz-Ec-lek"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -70,17 +73,27 @@
                                     <constraint firstAttribute="width" constant="300" id="u3M-78-ZkV"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-ad-8JY">
+                                <rect key="frame" x="205" y="630" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="IY5-A6-MQL"/>
+                                    <constraint firstAttribute="height" constant="20" id="iLO-WY-Srw"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9gC-Cf-rtP" firstAttribute="centerY" secondItem="DcQ-zL-dih" secondAttribute="centerY" id="NTy-PC-GxF"/>
+                            <constraint firstItem="yNE-ad-8JY" firstAttribute="top" secondItem="9gC-Cf-rtP" secondAttribute="bottom" constant="25.666666666666742" id="U80-05-gde"/>
                             <constraint firstItem="9gC-Cf-rtP" firstAttribute="centerX" secondItem="DcQ-zL-dih" secondAttribute="centerX" id="djH-rS-bbi"/>
+                            <constraint firstItem="yNE-ad-8JY" firstAttribute="centerX" secondItem="DcQ-zL-dih" secondAttribute="centerX" id="wjq-uo-vbc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="3MA-Fk-gOM" id="ENN-7G-iMD"/>
                         <outlet property="loginButton" destination="vLN-iY-a56" id="c0r-gV-fVb"/>
                         <outlet property="passwordTextField" destination="oke-HN-7qF" id="ALP-iw-8be"/>
+                        <outlet property="signUpButton" destination="NIB-ao-Dyl" id="zH3-p5-Wcv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxI-yk-Smb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

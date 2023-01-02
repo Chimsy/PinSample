@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("\nℹ️ PinSample:  Did Press Login \n✅")
+    }
+    
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        print("\nℹ️ PinSample:  Did Press SignUp \n✅")
     }
     
     
