@@ -83,9 +83,6 @@
 				B59D9DC42962CA3600DEE888 /* Model */,
 				B59D9DC52962CA4500DEE888 /* View */,
 				B59D9DC62962CA5400DEE888 /* Controller */,
-				4DFABCE91AC0CBAC00D21C43 /* ViewController.swift */,
-				4DFABCEE1AC0CBAC00D21C43 /* Images.xcassets */,
-				4DFABCF01AC0CBAC00D21C43 /* LaunchScreen.xib */,
 				4DFABCE51AC0CBAC00D21C43 /* Supporting Files */,
 			);
 			path = PinSample;
@@ -126,7 +123,9 @@
 		B59D9DC52962CA4500DEE888 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DFABCF01AC0CBAC00D21C43 /* LaunchScreen.xib */,
 				4DFABCEB1AC0CBAC00D21C43 /* Main.storyboard */,
+				4DFABCEE1AC0CBAC00D21C43 /* Images.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -135,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B59D9DC22962C8F200DEE888 /* LoginViewController.swift */,
+				4DFABCE91AC0CBAC00D21C43 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
