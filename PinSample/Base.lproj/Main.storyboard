@@ -245,7 +245,7 @@
         <!--On The Map-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="On The Map" customClass="ViewController" customModule="PinSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" userLabel="On The Map" customClass="MapViewController" customModule="PinSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -254,8 +254,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wsC-T6-DjN">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wsC-T6-DjN">
+                                <rect key="frame" x="0.0" y="56" width="430" height="807"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="B3h-qY-GnK"/>
                                 </connections>
@@ -263,20 +263,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wsC-T6-DjN" secondAttribute="trailing" constant="-16" id="1ia-sI-B3b"/>
-                            <constraint firstItem="wsC-T6-DjN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="2kr-Hf-K3r"/>
-                            <constraint firstItem="wsC-T6-DjN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Q5I-qf-Nz9"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wsC-T6-DjN" secondAttribute="bottom" id="oZl-Al-9Xp"/>
+                            <constraint firstAttribute="bottom" secondItem="wsC-T6-DjN" secondAttribute="bottom" id="0ey-kt-8xb"/>
+                            <constraint firstItem="wsC-T6-DjN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="5Vx-pA-fx4"/>
+                            <constraint firstAttribute="trailing" secondItem="wsC-T6-DjN" secondAttribute="trailing" id="Y2o-3j-uiO"/>
+                            <constraint firstItem="wsC-T6-DjN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xXj-d8-oES"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cWf-Af-LeU"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="icon_mapview-deselected" selectedImage="icon_mapview-selected" id="5Pb-R6-DK3"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="cWf-Af-LeU">
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="WeH-37-LmU"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item"/>
+                            <barButtonItem systemItem="refresh" id="YPX-cs-rQj" userLabel="Refresh Nav Bar Item"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="wsC-T6-DjN" id="qdk-b8-F4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="-650"/>
+            <point key="canvasLocation" x="2585.5813953488373" y="-650.21459227467813"/>
         </scene>
     </scenes>
     <resources>
