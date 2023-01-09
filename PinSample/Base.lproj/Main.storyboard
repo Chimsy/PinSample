@@ -302,6 +302,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="jCC-CD-m9h" kind="relationship" relationship="rootViewController" id="cw7-xH-MDK"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOH-bQ-7F2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,12 +319,12 @@
                         <viewControllerLayoutGuide type="bottom" id="vdf-9p-11d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bLM-9s-uai">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="u6B-hD-vQJ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="gmW-gu-8GF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gmW-gu-8GF"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdN-lV-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
