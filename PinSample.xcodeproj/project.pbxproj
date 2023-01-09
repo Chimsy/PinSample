@@ -13,6 +13,7 @@
 		4DFABCEF1AC0CBAC00D21C43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFABCEE1AC0CBAC00D21C43 /* Images.xcassets */; };
 		4DFABCF21AC0CBAC00D21C43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFABCF01AC0CBAC00D21C43 /* LaunchScreen.xib */; };
 		4DFABCFE1AC0CBAC00D21C43 /* PinSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFABCFD1AC0CBAC00D21C43 /* PinSampleTests.swift */; };
+		B556E0B1296C10610005B2F8 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0B0296C10610005B2F8 /* AddLocationViewController.swift */; };
 		B55772A929696CF700E11CAC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772A829696CF700E11CAC /* TableViewController.swift */; };
 		B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772AA296ABB9600E11CAC /* MapViewController.swift */; };
 		B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9DC22962C8F200DEE888 /* LoginViewController.swift */; };
@@ -39,6 +40,7 @@
 		4DFABCF71AC0CBAC00D21C43 /* PinSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFABCFC1AC0CBAC00D21C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFABCFD1AC0CBAC00D21C43 /* PinSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSampleTests.swift; sourceTree = "<group>"; };
+		B556E0B0296C10610005B2F8 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		B55772A829696CF700E11CAC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B55772AA296ABB9600E11CAC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B59D9DC22962C8F200DEE888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B59D9DC22962C8F200DEE888 /* LoginViewController.swift */,
+				B556E0B0296C10610005B2F8 /* AddLocationViewController.swift */,
 				B55772AA296ABB9600E11CAC /* MapViewController.swift */,
 				B55772A829696CF700E11CAC /* TableViewController.swift */,
 				4DFABCE91AC0CBAC00D21C43 /* ViewController.swift */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */,
+				B556E0B1296C10610005B2F8 /* AddLocationViewController.swift in Sources */,
 				4DFABCEA1AC0CBAC00D21C43 /* ViewController.swift in Sources */,
 				4DFABCE81AC0CBAC00D21C43 /* AppDelegate.swift in Sources */,
 				B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */,
