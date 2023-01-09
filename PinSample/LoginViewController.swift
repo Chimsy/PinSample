@@ -10,14 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    // MARK:Outlets
+    // MARK: Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     
-    // MARK:
+    // MARK: Properties
     private let autoHideKeyboardDelegate = HideKeyboardOnEnterDelegate()
     
     // MARK: LifeCycle
