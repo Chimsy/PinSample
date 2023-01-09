@@ -31,6 +31,7 @@
 		B556E0D6296C23B50005B2F8 /* TableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0D5296C23B50005B2F8 /* TableView+Ext.swift */; };
 		B55772A929696CF700E11CAC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772A829696CF700E11CAC /* TableViewController.swift */; };
 		B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772AA296ABB9600E11CAC /* MapViewController.swift */; };
+		B564CBB4296C51B9009DA6FD /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564CBB3296C51B9009DA6FD /* String+Ext.swift */; };
 		B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9DC22962C8F200DEE888 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		B556E0D5296C23B50005B2F8 /* TableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Ext.swift"; sourceTree = "<group>"; };
 		B55772A829696CF700E11CAC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B55772AA296ABB9600E11CAC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B564CBB3296C51B9009DA6FD /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		B59D9DC22962C8F200DEE888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				B556E0CD296C1B6C0005B2F8 /* UIViewController+Ext.swift */,
+				B564CBB3296C51B9009DA6FD /* String+Ext.swift */,
 				B556E0CF296C1C630005B2F8 /* View */,
 			);
 			name = Extensions;
@@ -365,6 +368,7 @@
 				B556E0B6296C181B0005B2F8 /* OnTheMapClient.swift in Sources */,
 				4DFABCEA1AC0CBAC00D21C43 /* ViewController.swift in Sources */,
 				B556E0C5296C1A580005B2F8 /* LoginResponse.swift in Sources */,
+				B564CBB4296C51B9009DA6FD /* String+Ext.swift in Sources */,
 				4DFABCE81AC0CBAC00D21C43 /* AppDelegate.swift in Sources */,
 				B556E0D1296C1C750005B2F8 /* UITextField+Ext.swift in Sources */,
 				B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */,

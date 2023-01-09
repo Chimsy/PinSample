@@ -172,28 +172,28 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationLevel="1" indentationWidth="10" reuseIdentifier="LocationTableViewCell" textLabel="FkL-XZ-J40" detailTextLabel="MiJ-FT-ft3" imageView="1sK-vD-nJk" style="IBUITableViewCellStyleSubtitle" id="VL2-kt-mmD">
-                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="430" height="55.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VL2-kt-mmD" id="Wuf-de-v9y">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="55.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FkL-XZ-J40">
-                                                    <rect key="frame" x="69" y="5" width="33" height="20.333333333333332"/>
+                                                    <rect key="frame" x="69" y="8.9999999999999982" width="33" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MiJ-FT-ft3">
-                                                    <rect key="frame" x="69" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <rect key="frame" x="69" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icon_pin" id="1sK-vD-nJk">
-                                                    <rect key="frame" x="20" y="9.6666666666666643" width="24" height="24"/>
+                                                    <rect key="frame" x="20" y="15.666666666666664" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -344,6 +344,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Find Location">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="findLocation:" destination="jCC-CD-m9h" eventType="touchUpInside" id="cyG-t2-thd"/>
+                                        </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="o20-Px-N8J">
                                         <rect key="frame" x="0.0" y="124" width="300" height="20"/>
@@ -361,9 +364,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="u6B-hD-vQJ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gmW-gu-8GF"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gmW-gu-8GF">
+                            <connections>
+                                <action selector="onCancel:" destination="jCC-CD-m9h" id="RL8-Bq-itN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="o20-Px-N8J" id="cgf-Mu-tKv"/>
+                        <outlet property="addressTextField" destination="SUj-PY-73r" id="NvY-gG-Etf"/>
+                        <outlet property="findLocation" destination="LPT-i7-7eC" id="oA7-cE-aPy"/>
+                        <outlet property="findLocationButton" destination="LPT-i7-7eC" id="1bA-t2-4az"/>
+                        <outlet property="urlTextField" destination="eAR-Qv-AoH" id="htY-9L-Xnd"/>
                         <segue destination="P1Q-sV-2Ro" kind="show" identifier="ShowLocationOnMap" id="7V6-RM-eon"/>
                     </connections>
                 </viewController>
@@ -394,6 +406,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="FINISH"/>
+                                <connections>
+                                    <action selector="finish:" destination="P1Q-sV-2Ro" eventType="touchUpInside" id="2Jb-eb-Tle"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-Ni-L6x" userLabel="Activity Indicator">
                                 <rect key="frame" x="205" y="721" width="20" height="20"/>
@@ -413,6 +428,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qA4-IU-Lnt"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Sxg-Ni-L6x" id="d23-XQ-783"/>
+                        <outlet property="finishButton" destination="Ecw-2U-ZGO" id="bx3-Tp-5Xt"/>
+                        <outlet property="mapView" destination="hLx-jn-Rgh" id="vBT-5t-CvN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOa-gE-NX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
