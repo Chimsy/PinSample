@@ -266,6 +266,11 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="B3h-qY-GnK"/>
                                 </connections>
                             </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rAf-v4-srH" userLabel="Activity Indicator View">
+                                <rect key="frame" x="197" y="441" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -277,19 +282,30 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="icon_mapview-deselected" selectedImage="icon_mapview-selected" id="5Pb-R6-DK3"/>
                     <navigationItem key="navigationItem" title="On The Map" id="cWf-Af-LeU">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="WeH-37-LmU"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="WeH-37-LmU">
+                            <connections>
+                                <action selector="logout:" destination="vXZ-lx-hvc" id="lAR-G1-BHl"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item">
                                 <connections>
                                     <segue destination="cyR-9q-gbW" kind="presentation" id="aaj-bz-o8e"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="refresh" id="YPX-cs-rQj" userLabel="Refresh Nav Bar Item"/>
+                            <barButtonItem systemItem="refresh" id="YPX-cs-rQj" userLabel="Refresh Nav Bar Item">
+                                <connections>
+                                    <action selector="onRefresh:" destination="vXZ-lx-hvc" id="LUl-9E-54d"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mapView" destination="wsC-T6-DjN" id="qdk-b8-F4r"/>
+                        <outlet property="activityIndicatorView" destination="rAf-v4-srH" id="EvG-kU-tw9"/>
+                        <outlet property="addNavBarItem" destination="aFq-fd-Ilb" id="IvL-MW-x1B"/>
+                        <outlet property="mapView" destination="wsC-T6-DjN" id="Mkj-aA-HQc"/>
+                        <outlet property="refreshNavBarItem" destination="YPX-cs-rQj" id="fyZ-Rg-rEU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -440,7 +456,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V3M-cd-9dE"/>
+        <segue reference="aaj-bz-o8e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_listview-deselected" width="75" height="50"/>
