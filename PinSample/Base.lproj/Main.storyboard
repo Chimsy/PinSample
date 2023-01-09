@@ -232,7 +232,11 @@
                     <navigationItem key="navigationItem" title="On The Map" id="Kc8-y2-310">
                         <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="aI8-sb-r9v"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="UMH-Yq-CvP" userLabel="Add Nav Bar Item"/>
+                            <barButtonItem systemItem="add" id="UMH-Yq-CvP" userLabel="Add Nav Bar Item">
+                                <connections>
+                                    <segue destination="cyR-9q-gbW" kind="presentation" id="V3M-cd-9dE"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="refresh" id="NXb-8I-KEk" userLabel="Refresh Nav Bar Item"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -273,7 +277,11 @@
                     <navigationItem key="navigationItem" title="On The Map" id="cWf-Af-LeU">
                         <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="WeH-37-LmU"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item"/>
+                            <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item">
+                                <connections>
+                                    <segue destination="cyR-9q-gbW" kind="presentation" id="aaj-bz-o8e"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="refresh" id="YPX-cs-rQj" userLabel="Refresh Nav Bar Item"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -286,7 +294,44 @@
             </objects>
             <point key="canvasLocation" x="2585.5813953488373" y="-650.21459227467813"/>
         </scene>
+        <!--Add Location Nav Controller-->
+        <scene sceneID="g61-z0-qws">
+            <objects>
+                <navigationController id="cyR-9q-gbW" userLabel="Add Location Nav Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gO5-Z7-F4G">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOH-bQ-7F2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3567" y="-95"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="2bC-4r-S1p">
+            <objects>
+                <viewController id="jCC-CD-m9h" userLabel="Add View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QbB-i9-qmC"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdf-9p-11d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bLM-9s-uai">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Location" id="u6B-hD-vQJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="gmW-gu-8GF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdN-lV-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4489" y="-95"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="V3M-cd-9dE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_listview-deselected" width="75" height="50"/>
         <image name="icon_listview-selected" width="75" height="50"/>
