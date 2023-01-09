@@ -92,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="3MA-Fk-gOM" id="ENN-7G-iMD"/>
+                        <outlet property="loginActivityIndicator" destination="yNE-ad-8JY" id="74L-c5-HW9"/>
                         <outlet property="loginButton" destination="vLN-iY-a56" id="c0r-gV-fVb"/>
                         <outlet property="passwordTextField" destination="oke-HN-7qF" id="ALP-iw-8be"/>
                         <outlet property="signUpButton" destination="NIB-ao-Dyl" id="zH3-p5-Wcv"/>
