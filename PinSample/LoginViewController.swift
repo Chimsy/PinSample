@@ -57,7 +57,15 @@ class LoginViewController: UIViewController {
     
     // MARK: Button Actions
     @IBAction func loginButtonTapped(_ sender: Any) {
-        print("\nℹ️ PinSample:  Did Press Login \n✅")
+        loggingIn(true)
+        OnTheMapClient.login(email: emailTextField.text!, password: passwordTextField.text!) { success, error in
+            if success {
+                self.fetchStudentLocations()
+            } else {
+                self.loggingIn(false)
+                self.showErrorAlert(message: error?.localizedDescription ?? "Login Failed")
+            }
+        }
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
