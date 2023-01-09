@@ -47,6 +47,7 @@ class MapViewController: UIViewController {
     private func onDataRefresh(inProgress: Bool) {
         refreshNavBarItem.isEnabled = !inProgress
         addNavBarItem.isEnabled = !inProgress
+        
         if inProgress {
             activityIndicatorView.startAnimating()
         } else {
@@ -74,5 +75,7 @@ class MapViewController: UIViewController {
         }
     }
     
+    @IBAction func onAddLocation(_ sender: UIBarButtonItem) {
+    }
     
 }

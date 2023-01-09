@@ -136,7 +136,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNV-CT-J6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="487"/>
+            <point key="canvasLocation" x="1475" y="277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rxM-u3-4CQ">
@@ -153,7 +153,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlK-WL-5B8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="-650"/>
+            <point key="canvasLocation" x="1475" y="-481"/>
         </scene>
         <!--On The Map-->
         <scene sceneID="dSc-sq-aiy">
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgl-DD-PAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="487"/>
+            <point key="canvasLocation" x="2340" y="277"/>
         </scene>
         <!--On The Map-->
         <scene sceneID="ufC-wZ-h7g">
@@ -290,6 +290,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item">
                                 <connections>
+                                    <action selector="onAddLocation:" destination="vXZ-lx-hvc" id="3wF-Hg-QVd"/>
                                     <segue destination="cyR-9q-gbW" kind="presentation" id="aaj-bz-o8e"/>
                                 </connections>
                             </barButtonItem>
@@ -310,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585.5813953488373" y="-650.21459227467813"/>
+            <point key="canvasLocation" x="2340" y="-482"/>
         </scene>
         <!--Add Location Nav Controller-->
         <scene sceneID="g61-z0-qws">
@@ -326,7 +327,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOH-bQ-7F2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="-95"/>
+            <point key="canvasLocation" x="3282" y="-95"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="2bC-4r-S1p">
@@ -389,7 +390,6 @@
                     <connections>
                         <outlet property="activityIndicator" destination="o20-Px-N8J" id="cgf-Mu-tKv"/>
                         <outlet property="addressTextField" destination="SUj-PY-73r" id="NvY-gG-Etf"/>
-                        <outlet property="findLocation" destination="LPT-i7-7eC" id="oA7-cE-aPy"/>
                         <outlet property="findLocationButton" destination="LPT-i7-7eC" id="1bA-t2-4az"/>
                         <outlet property="urlTextField" destination="eAR-Qv-AoH" id="htY-9L-Xnd"/>
                         <segue destination="P1Q-sV-2Ro" kind="show" identifier="ShowLocationOnMap" id="7V6-RM-eon"/>
@@ -397,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdN-lV-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4489" y="-95"/>
+            <point key="canvasLocation" x="4169" y="-95"/>
         </scene>
         <!--Show Location On Map View Controller-->
         <scene sceneID="kjO-Bw-wpK">
@@ -452,11 +452,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOa-gE-NX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5412.5581395348836" y="-95.278969957081557"/>
+            <point key="canvasLocation" x="5022" y="-95"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aaj-bz-o8e"/>
+        <segue reference="V3M-cd-9dE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_listview-deselected" width="75" height="50"/>

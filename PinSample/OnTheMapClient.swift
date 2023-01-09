@@ -75,8 +75,6 @@ class OnTheMapClient {
                 completionHandler(false, error)
                 return
             }
-            
-            print("Location saved successfully with object id: \(data.objectId)")
             completionHandler(true, nil)
         }
     }
@@ -149,7 +147,6 @@ class OnTheMapClient {
             data = data.subdata(in: 5..<data.count)
         }
         let string = String(data: data, encoding: .utf8) ?? "Empty response"
-        print("response: " + string)
         do {
             let response = try JSONDecoder().decode(ResponseType.self, from: data)
             callCompletionHandler(response, nil)
@@ -194,7 +191,6 @@ class OnTheMapClient {
             }
             
             let newData = data.subdata(in: 5..<data.count) /* subset response data! */
-            print("Logout response: " + String(data: newData, encoding: .utf8)!)
             callCompletionHandler(true, nil)
         }
         task.resume()
