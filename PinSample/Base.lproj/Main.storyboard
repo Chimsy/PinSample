@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -361,10 +362,60 @@
                     <navigationItem key="navigationItem" title="Add Location" id="u6B-hD-vQJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gmW-gu-8GF"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="P1Q-sV-2Ro" kind="show" identifier="ShowLocationOnMap" id="7V6-RM-eon"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdN-lV-utw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4489" y="-95"/>
+        </scene>
+        <!--Show Location On Map View Controller-->
+        <scene sceneID="kjO-Bw-wpK">
+            <objects>
+                <viewController id="P1Q-sV-2Ro" userLabel="Show Location On Map View Controller" customClass="ShowLocationOnMapViewController" customModule="PinSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lKB-UD-RGG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rsi-6B-0Rv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="12s-5K-f5O">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-jn-Rgh">
+                                <rect key="frame" x="0.0" y="56" width="430" height="807"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecw-2U-ZGO" userLabel="Finish Button">
+                                <rect key="frame" x="40" y="781" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NET-WZ-TBJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="FINISH"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-Ni-L6x" userLabel="Activity Indicator">
+                                <rect key="frame" x="205" y="721" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ecw-2U-ZGO" firstAttribute="leading" secondItem="12s-5K-f5O" secondAttribute="leadingMargin" constant="20" id="122-QJ-Kwd"/>
+                            <constraint firstItem="Ecw-2U-ZGO" firstAttribute="top" secondItem="Sxg-Ni-L6x" secondAttribute="bottom" constant="40" id="7xY-ZG-Zf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ecw-2U-ZGO" secondAttribute="trailing" constant="20" id="HXW-Rx-Qeo"/>
+                            <constraint firstItem="hLx-jn-Rgh" firstAttribute="top" secondItem="lKB-UD-RGG" secondAttribute="bottom" id="PlW-TF-t1G"/>
+                            <constraint firstItem="Sxg-Ni-L6x" firstAttribute="centerX" secondItem="12s-5K-f5O" secondAttribute="centerX" id="QGs-Yo-kdN"/>
+                            <constraint firstAttribute="trailing" secondItem="hLx-jn-Rgh" secondAttribute="trailing" id="XKj-eG-5t7"/>
+                            <constraint firstItem="hLx-jn-Rgh" firstAttribute="leading" secondItem="12s-5K-f5O" secondAttribute="leading" id="a8U-xk-B12"/>
+                            <constraint firstItem="Rsi-6B-0Rv" firstAttribute="top" secondItem="Ecw-2U-ZGO" secondAttribute="bottom" constant="8" symbolic="YES" id="ggP-q5-db1"/>
+                            <constraint firstAttribute="bottom" secondItem="hLx-jn-Rgh" secondAttribute="bottom" id="hn5-cr-cj2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qA4-IU-Lnt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOa-gE-NX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5412.5581395348836" y="-95.278969957081557"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
