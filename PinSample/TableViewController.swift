@@ -10,5 +10,50 @@ import UIKit
 
 class TableViewController: UIViewController {
     
+    // MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addNavBarItem: UIBarButtonItem!
+    @IBOutlet weak var refreshNavBarItem: UIBarButtonItem!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
+    // MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    // MARK: Helper Methods
+    private func onDataRefresh(inProgress: Bool) {
+        refreshNavBarItem.isEnabled = !inProgress
+        addNavBarItem.isEnabled = !inProgress
+        if inProgress {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
+    }
+    
+    // MARK: Button Actions
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        OnTheMapClient.logout { (success, error) in
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func onRefresh(_ sender: UIBarButtonItem) {
+        onDataRefresh(inProgress: true)
+        OnTheMapClient.getStudentLocations { (success, error) in
+            self.onDataRefresh(inProgress: false)
+            if success {
+                self.tableView.reloadData()
+            } else {
+                self.showErrorAlert(message: error?.localizedDescription ?? "Unable to refresh")
+            }
+        }
+    }
+    
+
+    
 }
 
