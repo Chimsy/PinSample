@@ -71,7 +71,7 @@ class OnTheMapClient {
     
     class func postStudentLocation(studentLocation: StudentLocation, completionHandler: @escaping (Bool, Error?) -> Void) {
         taskForPostRequest(url: Endpoints.postStudentLocation.url, request: studentLocation, responseType: PostStudentLocationResponse.self, skipFirstFiveCharacters: false) { (data, error) in
-            guard let data = data else {
+            guard data != nil else {
                 completionHandler(false, error)
                 return
             }
