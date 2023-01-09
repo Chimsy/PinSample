@@ -17,12 +17,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     
+    // MARK:
+    private let autoHideKeyboardDelegate = HideKeyboardOnEnterDelegate()
+    
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        print("\nℹ️ PinSample:  View Did Load \n✅")
-
+        
+        emailTextField.delegate = autoHideKeyboardDelegate
+        passwordTextField.delegate = autoHideKeyboardDelegate
     }
     
     
@@ -58,7 +61,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
-        print("\nℹ️ PinSample:  Did Press SignUp \n✅")
+        openUrl(url: OnTheMapClient.Endpoints.signUp.url)
     }
     
 }

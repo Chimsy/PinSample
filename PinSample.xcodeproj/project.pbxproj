@@ -25,6 +25,9 @@
 		B556E0C7296C1A6F0005B2F8 /* UserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0C6296C1A6F0005B2F8 /* UserDataResponse.swift */; };
 		B556E0C9296C1A9A0005B2F8 /* StudentLocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0C8296C1A9A0005B2F8 /* StudentLocationsResponse.swift */; };
 		B556E0CB296C1ABE0005B2F8 /* PostStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0CA296C1ABE0005B2F8 /* PostStudentLocationResponse.swift */; };
+		B556E0CE296C1B6C0005B2F8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0CD296C1B6C0005B2F8 /* UIViewController+Ext.swift */; };
+		B556E0D1296C1C750005B2F8 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0D0296C1C750005B2F8 /* UITextField.swift */; };
+		B556E0D4296C1CB80005B2F8 /* HideKeyboardOnEnterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556E0D3296C1CB80005B2F8 /* HideKeyboardOnEnterDelegate.swift */; };
 		B55772A929696CF700E11CAC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772A829696CF700E11CAC /* TableViewController.swift */; };
 		B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55772AA296ABB9600E11CAC /* MapViewController.swift */; };
 		B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9DC22962C8F200DEE888 /* LoginViewController.swift */; };
@@ -63,6 +66,9 @@
 		B556E0C6296C1A6F0005B2F8 /* UserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataResponse.swift; sourceTree = "<group>"; };
 		B556E0C8296C1A9A0005B2F8 /* StudentLocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsResponse.swift; sourceTree = "<group>"; };
 		B556E0CA296C1ABE0005B2F8 /* PostStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStudentLocationResponse.swift; sourceTree = "<group>"; };
+		B556E0CD296C1B6C0005B2F8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		B556E0D0296C1C750005B2F8 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		B556E0D3296C1CB80005B2F8 /* HideKeyboardOnEnterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardOnEnterDelegate.swift; sourceTree = "<group>"; };
 		B55772A829696CF700E11CAC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B55772AA296ABB9600E11CAC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B59D9DC22962C8F200DEE888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFABCE71AC0CBAC00D21C43 /* AppDelegate.swift */,
+				B556E0D2296C1C990005B2F8 /* Helpers */,
 				B59D9DC42962CA3600DEE888 /* Model */,
 				B59D9DC52962CA4500DEE888 /* View */,
 				B59D9DC62962CA5400DEE888 /* Controller */,
@@ -177,6 +184,33 @@
 				B556E0C6296C1A6F0005B2F8 /* UserDataResponse.swift */,
 			);
 			name = Responses;
+			sourceTree = "<group>";
+		};
+		B556E0CC296C1B540005B2F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B556E0CD296C1B6C0005B2F8 /* UIViewController+Ext.swift */,
+				B556E0CF296C1C630005B2F8 /* View */,
+			);
+			name = Extensions;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B556E0CF296C1C630005B2F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B556E0D0296C1C750005B2F8 /* UITextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B556E0D2296C1C990005B2F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B556E0D3296C1CB80005B2F8 /* HideKeyboardOnEnterDelegate.swift */,
+				B556E0CC296C1B540005B2F8 /* Extensions */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B59D9DC42962CA3600DEE888 /* Model */ = {
@@ -320,6 +354,8 @@
 			files = (
 				B556E0B9296C18A80005B2F8 /* LoginRequest.swift in Sources */,
 				B556E0BD296C191F0005B2F8 /* StudentLocation.swift in Sources */,
+				B556E0CE296C1B6C0005B2F8 /* UIViewController+Ext.swift in Sources */,
+				B556E0D4296C1CB80005B2F8 /* HideKeyboardOnEnterDelegate.swift in Sources */,
 				B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */,
 				B556E0CB296C1ABE0005B2F8 /* PostStudentLocationResponse.swift in Sources */,
 				B556E0B1296C10610005B2F8 /* AddLocationViewController.swift in Sources */,
@@ -327,6 +363,7 @@
 				4DFABCEA1AC0CBAC00D21C43 /* ViewController.swift in Sources */,
 				B556E0C5296C1A580005B2F8 /* LoginResponse.swift in Sources */,
 				4DFABCE81AC0CBAC00D21C43 /* AppDelegate.swift in Sources */,
+				B556E0D1296C1C750005B2F8 /* UITextField.swift in Sources */,
 				B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */,
 				B55772A929696CF700E11CAC /* TableViewController.swift in Sources */,
 				B556E0BB296C18E00005B2F8 /* UdacityCredentials.swift in Sources */,
