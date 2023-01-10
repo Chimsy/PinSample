@@ -31,11 +31,8 @@ class LoginViewController: UIViewController {
     
     // MARK: Helper Methods
     private func loggingIn(_ isLogginIn: Bool) {
-        if isLogginIn {
-            loginActivityIndicator.startAnimating()
-        } else {
-            loginActivityIndicator.stopAnimating()
-        }
+        
+        isLogginIn ? loginActivityIndicator.startAnimating() : loginActivityIndicator.stopAnimating()
         
         //disable interactable views when login in progress
         emailTextField.isEnabled = !isLogginIn
