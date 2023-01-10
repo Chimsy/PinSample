@@ -42,18 +42,14 @@ class MapViewController: UIViewController {
     
     private func clearAllAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
-        AppData.studentLocations.removeAll()
+        
     }
     
     private func onDataRefresh(inProgress: Bool) {
         refreshNavBarItem.isEnabled = !inProgress
         addNavBarItem.isEnabled = !inProgress
         
-        if inProgress {
-            activityIndicatorView.startAnimating()
-        } else {
-            activityIndicatorView.stopAnimating()
-        }
+        inProgress ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
     }
     
     // MARK: Button Actions
@@ -65,6 +61,7 @@ class MapViewController: UIViewController {
     
     @IBAction func onRefresh(_ sender: UIBarButtonItem) {
         onDataRefresh(inProgress: true)
+        
         OnTheMapClient.getStudentLocations { (success, error) in
             self.onDataRefresh(inProgress: false)
             if success {
