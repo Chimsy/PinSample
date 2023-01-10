@@ -53,9 +53,9 @@ class OnTheMapClient {
         }
     }
     
-    class func getUserData(completionHandler: @escaping (UserDataResponse?, Error?) -> Void) {
+    /*class func getUserData(completionHandler: @escaping (UserDataResponse?, Error?) -> Void) {
         taskForGetRequest(url: Endpoints.getUserData.url, responseType: UserDataResponse.self, skipFirstFiveCharacters: true, completionHandler: completionHandler)
-    }
+    }*/
     
     class func getStudentLocations(completionHandler: @escaping (Bool, Error?) -> Void) {
         taskForGetRequest(url: Endpoints.getStudentLocations.url, responseType: StudentLocationsResponse.self, skipFirstFiveCharacters: false) { data, error in
