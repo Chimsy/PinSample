@@ -15,12 +15,3 @@ struct UserDataResponse: Codable {
         case lastName = "last_name"
     }
 }
-
-// Todo - Golden Code CleanUp
-//struct User: Codable {
-//    let lastName: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case lastName = "last_name"
-//    }
-//}

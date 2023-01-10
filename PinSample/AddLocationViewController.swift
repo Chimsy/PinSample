@@ -31,7 +31,6 @@ class AddLocationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        subscribeToKeyboardNotifications(keyboardWillShow: #selector(keyboardWillShow(_:)),keyboardWillHide: #selector(keyboardWillHide(_:)))
     }
     
     override func viewWillDisappear(_ animated: Bool) {

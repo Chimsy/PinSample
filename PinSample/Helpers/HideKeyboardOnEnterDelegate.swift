@@ -11,6 +11,7 @@ import UIKit
 
 class HideKeyboardOnEnterDelegate: NSObject, UITextFieldDelegate {
     var activeTextField: UITextField? = nil
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //hide the keyboard when user press enter
         textField.resignFirstResponder()
