@@ -53,9 +53,9 @@ class LoginViewController: UIViewController {
     }
     
     func confirmCaptureOfPersonalInformation(success: Bool, error: Error?) {
-        
-        print("\nℹ️ PinSample: ConfirmLogin Success \(success)  ✅")
-
+        if !success{
+            self.showErrorAlert(message: error?.localizedDescription ?? "Failed to fetch User Information")
+        }
     }
     
     // MARK: Button Actions
