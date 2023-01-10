@@ -146,7 +146,7 @@ class OnTheMapClient {
         if skipFirstFiveCharacters {
             data = data.subdata(in: 5..<data.count)
         }
-        let string = String(data: data, encoding: .utf8) ?? "Empty response"
+        _ = String(data: data, encoding: .utf8) ?? "Empty response"
         do {
             let response = try JSONDecoder().decode(ResponseType.self, from: data)
             callCompletionHandler(response, nil)
@@ -190,7 +190,7 @@ class OnTheMapClient {
                 return
             }
             
-            let newData = data.subdata(in: 5..<data.count) /* subset response data! */
+            _ = data.subdata(in: 5..<data.count) /* subset response data! */
             callCompletionHandler(true, nil)
         }
         task.resume()
