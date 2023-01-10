@@ -42,6 +42,7 @@ class MapViewController: UIViewController {
     
     private func clearAllAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
+        AppData.studentLocations.removeAll()
     }
     
     private func onDataRefresh(inProgress: Bool) {
