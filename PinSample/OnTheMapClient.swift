@@ -53,9 +53,9 @@ class OnTheMapClient {
         }
     }
     
-    /*class func getUserData(completionHandler: @escaping (UserDataResponse?, Error?) -> Void) {
+    class func getUserData(completionHandler: @escaping (UserDataResponse?, Error?) -> Void) {
         taskForGetRequest(url: Endpoints.getUserData.url, responseType: UserDataResponse.self, skipFirstFiveCharacters: true, completionHandler: completionHandler)
-    }*/
+    }
     
     class func getStudentLocations(completionHandler: @escaping (Bool, Error?) -> Void) {
         taskForGetRequest(url: Endpoints.getStudentLocations.url, responseType: StudentLocationsResponse.self, skipFirstFiveCharacters: false) { data, error in
@@ -87,9 +87,9 @@ class OnTheMapClient {
      as this syntax is invalid in Swift. So the only way to receive type info is to pass type info as param
      */
     @discardableResult private class func taskForGetRequest<ResponseType: Decodable>(url: URL,
-                                                                             responseType: ResponseType.Type,
-                                                                             skipFirstFiveCharacters: Bool,
-                                                                             completionHandler: @escaping (ResponseType?, Error?) -> Void) -> URLSessionTask {
+                                                                                     responseType: ResponseType.Type,
+                                                                                     skipFirstFiveCharacters: Bool,
+                                                                                     completionHandler: @escaping (ResponseType?, Error?) -> Void) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             handleResponse(data: data, error: error, responseType: responseType,
                            skipFirstFiveCharacters: skipFirstFiveCharacters, completionHandler: completionHandler)
@@ -104,10 +104,10 @@ class OnTheMapClient {
      as this syntax is invalid in Swift. So the only way to receive type info is to pass type info as param
      */
     private class func taskForPostRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL,
-                                                                                   request: RequestType,
-                                                                                   responseType: ResponseType.Type,
-                                                                                   skipFirstFiveCharacters: Bool,
-                                                                                   completionHandler: @escaping (ResponseType?, Error?) -> Void) {
+                                                                                           request: RequestType,
+                                                                                           responseType: ResponseType.Type,
+                                                                                           skipFirstFiveCharacters: Bool,
+                                                                                           completionHandler: @escaping (ResponseType?, Error?) -> Void) {
         //build http body
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
@@ -142,7 +142,7 @@ class OnTheMapClient {
          FOR ALL RESPONSES FROM THE UDACITY API, YOU WILL NEED TO SKIP THE FIRST 5 CHARACTERS OF THE RESPONSE.
          These characters are used for security purposes. In the upcoming examples,
          you will see that we subset the response data in order to skip over the first 5 characters.
-        */
+         */
         if skipFirstFiveCharacters {
             data = data.subdata(in: 5..<data.count)
         }
@@ -177,7 +177,7 @@ class OnTheMapClient {
         if let xsrfCookie = xsrfCookie {
             request.setValue(xsrfCookie.value, forHTTPHeaderField: "X-XSRF-TOKEN")
         }
-    
+        
         let callCompletionHandler = { (success: Bool, error: Error?) in
             DispatchQueue.main.async {
                 completionHandler?(success, error)
