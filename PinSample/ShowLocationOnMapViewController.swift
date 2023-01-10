@@ -31,11 +31,8 @@ class ShowLocationOnMapViewController: UIViewController {
     // MARK: Helper Methods
     func isLocationSaving(inProgress: Bool) {
         finishButton.isEnabled = !inProgress
-        if inProgress {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
+        
+        inProgress ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     
     // MARK: Button Actions
