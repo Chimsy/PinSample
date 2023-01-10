@@ -23,6 +23,11 @@ class ShowLocationOnMapViewController: UIViewController {
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Todo: Golden Zoom in current user. The app should zoom into the region chosen by the user. Please check this conversation, it's really helpful.
+        mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.follow, animated: true)
+        
         mapView.setCenter(studentLocation.toCoordinate2D(), animated: false)
         mapView.addAnnotation(studentLocation.toMKPointAnnotation())
         mapView.delegate = self
