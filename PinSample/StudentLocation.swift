@@ -22,8 +22,8 @@ struct StudentLocation: Codable {
     var updatedAt: String? = nil
     
     init(address: String, url: String, userId: String, location: CLLocationCoordinate2D) {
-        self.firstName = "Golden"
-        self.lastName = "Chimusinde"
+        self.firstName = UserSession.firstName
+        self.lastName = UserSession.lastName
         self.latitude = location.latitude
         self.longitude = location.longitude
         self.mapString = address

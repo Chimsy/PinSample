@@ -52,11 +52,19 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func confirmCaptureOfPersonalInformation(success: Bool, error: Error?) {
+        
+        print("\nℹ️ PinSample: ConfirmLogin Success \(success)  ✅")
+
+    }
+    
     // MARK: Button Actions
     @IBAction func loginButtonTapped(_ sender: Any) {
         loggingIn(true)
+        
         OnTheMapClient.login(email: emailTextField.text!, password: passwordTextField.text!) { success, error in
             if success {
+                OnTheMapClient.getUserInformationRequest(completion: self.confirmCaptureOfPersonalInformation(success:error:))
                 self.fetchStudentLocations()
             } else {
                 self.loggingIn(false)

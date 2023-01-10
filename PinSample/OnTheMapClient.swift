@@ -53,6 +53,34 @@ class OnTheMapClient {
         }
     }
     
+    class func getUserInformationRequest(completion: @escaping (Bool, Error?) -> Void) {
+        
+        let urlRequest = URLRequest(url: Endpoints.getUserData.url)
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            
+            if error != nil {
+                DispatchQueue.main.async {
+                    completion(false, error)
+                }
+                return
+            }
+            let range = 5..<data!.count
+            let newData = data?.subdata(in: range)
+            let decoder = JSONDecoder()
+            do {
+                let responseObject = try decoder.decode(UserDataResponse.self, from: newData!)
+                
+                UserSession.firstName = responseObject.firstName
+                UserSession.lastName = responseObject.lastName
+                UserSession.nickname = responseObject.nickname
+                DispatchQueue.main.async { completion(true, nil) }
+            } catch {
+                DispatchQueue.main.async { completion(false, error)}
+            }
+        }
+        task.resume()
+    }
+    
     class func getUserData(completionHandler: @escaping (UserDataResponse?, Error?) -> Void) {
         taskForGetRequest(url: Endpoints.getUserData.url, responseType: UserDataResponse.self, skipFirstFiveCharacters: true, completionHandler: completionHandler)
     }

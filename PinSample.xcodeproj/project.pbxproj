@@ -34,6 +34,7 @@
 		B564CBB6296C922D009DA6FD /* MapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564CBB5296C922D009DA6FD /* MapView+Ext.swift */; };
 		B564CBB8296C97E5009DA6FD /* ShowLocationOnMapView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564CBB7296C97E5009DA6FD /* ShowLocationOnMapView+Ext.swift */; };
 		B59D9DC32962C8F200DEE888 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59D9DC22962C8F200DEE888 /* LoginViewController.swift */; };
+		B5EC3B77296DB3CF00FC6F6E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EC3B76296DB3CF00FC6F6E /* UserSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		B564CBB5296C922D009DA6FD /* MapView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapView+Ext.swift"; sourceTree = "<group>"; };
 		B564CBB7296C97E5009DA6FD /* ShowLocationOnMapView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowLocationOnMapView+Ext.swift"; sourceTree = "<group>"; };
 		B59D9DC22962C8F200DEE888 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B5EC3B76296DB3CF00FC6F6E /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B556E0BF296C19B40005B2F8 /* AppData.swift */,
+				B5EC3B76296DB3CF00FC6F6E /* UserSession.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				B556E0D1296C1C750005B2F8 /* UITextField+Ext.swift in Sources */,
 				B55772AB296ABB9600E11CAC /* MapViewController.swift in Sources */,
 				B55772A929696CF700E11CAC /* TableViewController.swift in Sources */,
+				B5EC3B77296DB3CF00FC6F6E /* UserSession.swift in Sources */,
 				B556E0BB296C18E00005B2F8 /* UdacityCredentials.swift in Sources */,
 				B564CBB6296C922D009DA6FD /* MapView+Ext.swift in Sources */,
 				B556E0C9296C1A9A0005B2F8 /* StudentLocationsResponse.swift in Sources */,
