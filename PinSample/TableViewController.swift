@@ -23,24 +23,22 @@ class TableViewController: UIViewController {
         tableView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
     // MARK: Helper Methods
-    private func onDataRefresh(inProgress: Bool) {
+   private func onDataRefresh(inProgress: Bool) {
         refreshNavBarItem.isEnabled = !inProgress
         addNavBarItem.isEnabled = !inProgress
         
         inProgress ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
     }
     
-    // MARK: Button Actions
-    @IBAction func logout(_ sender: UIBarButtonItem) {
-        OnTheMapClient.logout { (success, error) in
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func onRefresh(_ sender: UIBarButtonItem) {
+    private func loadData() {
         onDataRefresh(inProgress: true)
-        
+
         OnTheMapClient.getStudentLocations { (success, error) in
             self.onDataRefresh(inProgress: false)
             if success {
@@ -51,7 +49,17 @@ class TableViewController: UIViewController {
         }
     }
     
-
+    // MARK: Button Actions
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        OnTheMapClient.logout { (success, error) in
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func onRefresh(_ sender: UIBarButtonItem) {
+        loadData()
+    }
+    
     
 }
 

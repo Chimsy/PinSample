@@ -30,10 +30,15 @@ class MapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        loadData()
     }
     
     // MARK: Helper Methods
     private func setupAnnotations() {
+        // Pins were duplicating because we weren't clearing them from the map. The line below addresses just that
+        mapAnnotations.removeAll()
+        
         for location in AppData.studentLocations {
             mapAnnotations.append(location.toMKPointAnnotation())
         }
@@ -52,15 +57,10 @@ class MapViewController: UIViewController {
         inProgress ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
     }
     
-    // MARK: Button Actions
-    @IBAction func logout(_ sender: UIBarButtonItem) {
-        OnTheMapClient.logout { (success, error) in
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func onRefresh(_ sender: UIBarButtonItem) {
+    private func loadData(){
         onDataRefresh(inProgress: true)
+        
+
         
         OnTheMapClient.getStudentLocations { (success, error) in
             self.onDataRefresh(inProgress: false)
@@ -73,7 +73,16 @@ class MapViewController: UIViewController {
         }
     }
     
-    @IBAction func onAddLocation(_ sender: UIBarButtonItem) {
+    // MARK: Button Actions
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        OnTheMapClient.logout { (success, error) in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+    @IBAction func onRefresh(_ sender: UIBarButtonItem) {
+        loadData()
+    }
+    
     
 }

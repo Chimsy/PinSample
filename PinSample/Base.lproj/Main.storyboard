@@ -290,7 +290,6 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="aFq-fd-Ilb" userLabel="Add Nav Bar Item">
                                 <connections>
-                                    <action selector="onAddLocation:" destination="vXZ-lx-hvc" id="3wF-Hg-QVd"/>
                                     <segue destination="cyR-9q-gbW" kind="presentation" id="aaj-bz-o8e"/>
                                 </connections>
                             </barButtonItem>

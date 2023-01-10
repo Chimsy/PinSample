@@ -91,7 +91,7 @@ class OnTheMapClient {
                 completionHandler(false, error)
                 return
             }
-            
+            AppData.studentLocations.removeAll()
             AppData.studentLocations = data.results
             completionHandler(true, nil)
         }
